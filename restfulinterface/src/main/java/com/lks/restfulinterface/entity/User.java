@@ -1,7 +1,7 @@
-package com.lks.demo.entity;
+package com.lks.restfulinterface.entity;
 
 /**
- * Created by likaisong on 2019/4/12.
+ * Created by likaisong on 2019/5/29.
  */
 public class User {
     private long userId;

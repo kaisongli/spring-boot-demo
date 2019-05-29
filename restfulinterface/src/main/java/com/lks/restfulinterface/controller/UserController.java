@@ -1,6 +1,6 @@
-package com.lks.demo.controller;
+package com.lks.restfulinterface.controller;
 
-import com.lks.demo.entity.User;
+import com.lks.restfulinterface.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -9,11 +9,12 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by likaisong on 2019/4/12.
+ * Created by likaisong on 2019/5/29.
  */
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {
+    //线程安全的map
     static Map<Long, User> userMap = new ConcurrentHashMap<>();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -51,7 +52,7 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public String putUser(@PathVariable("id") Long userId,  @ModelAttribute User user){
+    public String putUser(@PathVariable("id") Long userId, @ModelAttribute User user){
         User oldUser = userMap.get(userId);
         oldUser.setName(user.getName());
         oldUser.setAge(user.getAge());

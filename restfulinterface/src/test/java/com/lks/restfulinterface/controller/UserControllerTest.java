@@ -1,4 +1,4 @@
-package com.lks.demo.controller;
+package com.lks.restfulinterface.controller;
 
 import org.junit.Test;
 import org.springframework.http.MediaType;

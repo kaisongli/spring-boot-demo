@@ -1,4 +1,4 @@
-package com.lks.demo.controller;
+package com.lks.restfulinterface.controller;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
